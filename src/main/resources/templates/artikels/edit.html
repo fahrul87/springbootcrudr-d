@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ARAZ-AC ADMIN ARTIKEL</title>
+        <!--/*/ <th:block th:include="fragments/head :: head"></th:block> /*/-->
+    </head>
+    <body>
+        <!--/*/ <th:block th:include="fragments/header :: body"></th:block> /*/-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2">
+                    <!--<div class="container">-->
+                    <div class="panel panel-default">
+                        <!-- Default panel contents -->
+                        <div class="panel-heading">Edit Artikel</div>
+                        <div class="panel-body">
+                            <form th:action="@{/artikels/update}" th:object="${artikel}" method="post">
+                                <input type="hidden" th:field="*{id}" />
+                                <div class="form-group">
+                                    <label for="inputId">ID</label>
+                                    <input type="text" class="form-control" id="inputId" placeholder="ID" th:field="*{id}" disabled="disabled" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputJudul">Judul</label>
+                                    <input type="text" class="form-control" id="inputJudul" placeholder="judul" th:field="*{judul}" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputIsi">Isi</label>
+                                    <input type="text" class="form-control" id="inputIsi" placeholder="isi" th:field="*{isi}" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputTanggal">Tanggal</label>
+                                    <input type="text" class="form-control" id="inputTanggal" placeholder="tanggal" th:field="*{tanggal}" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputPenulis">Penulis</label>
+                                    <input type="text" class="form-control" id="inputPenulis" placeholder="penulis" th:field="*{penulis}" />
+                                </div>
+                                <div class="text-right">
+                                    <a href="artikel" th:href="@{/artikels}" class="btn btn-default">Cancel</a>
+                                    <button type="submit" class="btn btn-primary">Save</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="panel-footer">
+                        </div>
+                    </div>
+                    <!--</div>-->
+                </div>
+            </div>
+        </div>
+        <!--/*/ <th:block th:include="fragments/js :: body"></th:block> /*/-->
+        <script src="../static/js/app2.js" th:src="@{/js/app2.js}"></script>
+    </body>
+</html>
