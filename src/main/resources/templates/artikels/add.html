@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ARAZ-AC ADMIN ARTIKEL</title>
+        <!--/*/ <th:block th:include="fragments/head :: head"></th:block> /*/-->
+    </head>
+    <body>
+        <!--/*/ <th:block th:include="fragments/header :: body"></th:block> /*/-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2">
+                    <!--<div class="container">-->
+                    <div class="panel panel-default">
+                        <!-- Default panel contents -->
+                        <div class="panel-heading">Add Artikel</div>
+                        <div class="panel-body">
+                            <form action="/artikel/add" th:action="@{/artikel/add}" th:object="${artikel}" method="post">
+                                <div class="form-group">
+                                    <label for="inputJudul">Judul</label>
+                                    <input type="text" class="form-control" id="inputJudul" placeholder="Judul" th:field="*{judul}" name="judul" />
+                                    <span  class="help-block" th:if="${#fields.hasErrors('judul')}" th:errors="*{judul}">Judul Error</span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputIsi">Isi</label>
+                                    <input type="text" class="form-control" id="inputIsi" placeholder="Isi" th:field="*{isi}" name="isi" />
+                                    <span  class="help-block" th:if="${#fields.hasErrors('isi')}" th:errors="*{isi}">Isi Error</span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputTanggal">Tanggal</label>
+                                    <input type="text" class="form-control" id="inputTanggal" placeholder="Tanggal" th:field="*{tanggal}" name="tanggal" />
+                                    <span  class="help-block" th:if="${#fields.hasErrors('tanggal')}" th:errors="*{tanggal}">Tanggal Error</span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputPenulis">Penulis</label>
+                                    <input type="text" class="form-control" id="inputPenulis" placeholder="penulis" th:field="*{penulis}" name="penulis" />
+                                    <span  class="help-block" th:if="${#fields.hasErrors('penulis')}" th:errors="*{penulis}">Penulis Error</span>
+                                </div>
+                                <div class="text-right">
+                                    <a href="/artikel" th:href="@{/artikel}" class="btn btn-default">Cancel</a>
+                                    <button type="submit" class="btn btn-primary">Save</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="panel-footer">
+                        </div>
+                    </div>
+                    <!--</div>-->
+                </div>
+            </div>
+        </div>
+        <!--/*/ <th:block th:include="fragments/js :: body"></th:block> /*/-->
+        <script src="../static/js/app2.js" th:src="@{/js/app2.js}"></script>
+    </body>
+</html>

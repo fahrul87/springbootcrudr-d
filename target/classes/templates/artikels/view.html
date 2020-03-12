@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ARAZ-AC ADMIN Artikel </title>
+        <!--/*/ <th:block th:include="fragments/head :: head"></th:block> /*/-->
+    </head>
+    <body>
+        <!--/*/ <th:block th:include="fragments/header :: body"></th:block> /*/-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2">
+                    <!--<div class="container">-->
+                    <div class="panel panel-default">
+                        <!-- Default panel contents -->
+                        <div class="panel-heading">View Artikel</div>
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <label for="inputId">ID</label>
+                                <input type="text" class="form-control" id="inputId" placeholder="ID" th:field="*{artikel.id}" name="id" disabled="disabled" />
+                            </div>
+                            <div class="form-group">
+                                <label for="judul">Judul</label>
+                                <input type="text" class="form-control" id="judul" placeholder="judul" th:field="*{artikel.judul}" name="judul" disabled="disabled" />
+                            </div>
+                            <div class="form-group">
+                                <label for="isi">Isi</label>
+                                <input type="text" class="form-control" id="isi" placeholder="isi" th:field="*{artikel.isi}" name="isi" disabled="disabled" />
+                            </div>
+                            <div class="form-group">
+                                <label for="tanggal">Tanggal</label>
+                                <input type="text" class="form-control" id="tanggal" placeholder="tanggal" th:field="*{artikel.tanggal}" name="tanggal" disabled="disabled" />
+                            </div>
+                            <div class="form-group">
+                                <label for="penulis">Penulis</label>
+                                <input type="text" class="form-control" id="penulis" placeholder="penulis" th:field="*{artikel.penulis}" name="penulis" disabled="disabled" />
+                            </div>
+                            <div class="text-right">
+                                <a href="/artikel" th:href="@{/artikel}" class="btn btn-default">Back</a>
+                                <a th:href="@{'/artikel/edit/' + ${artikel.id}}" class="btn btn-primary">Edit</a>
+                            </div>
+                        </div>
+                        <div class="panel-footer">
+                        </div>
+                    </div>
+                    <!--</div>-->
+                </div>
+            </div>
+        </div>
+        <!--/*/ <th:block th:include="fragments/js :: body"></th:block> /*/-->
+        <script src="../static/js/app2.js" th:src="@{/js/app2.js}"></script>
+    </body>
+</html>
