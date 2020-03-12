@@ -1,13 +1,11 @@
 package io.github.julianjupiter.springbootcrud.domain;
 
-import javax.persistence.Column;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.validation.constraints.Size;
 
-import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
 public class Artikel {
@@ -21,7 +19,7 @@ public class Artikel {
     
     private String isi;
     
-    private String tangggal;    
+    private String tanggal;    
    
     private String penulis;
 
@@ -49,12 +47,12 @@ public class Artikel {
 		this.isi = isi;
 	}
 
-	public String getTangggal() {
-		return tangggal;
+	public String getTanggal() {
+		return tanggal;
 	}
 
-	public void setTangggal(String tangggal) {
-		this.tangggal = tangggal;
+	public void setTanggal(String tanggal) {
+		this.tanggal = tanggal;
 	}
 
 	public String getPenulis() {
@@ -64,6 +62,8 @@ public class Artikel {
 	public void setPenulis(String penulis) {
 		this.penulis = penulis;
 	}
+
+	
     
     
 

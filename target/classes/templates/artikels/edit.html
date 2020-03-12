@@ -16,7 +16,7 @@
                         <!-- Default panel contents -->
                         <div class="panel-heading">Edit Artikel</div>
                         <div class="panel-body">
-                            <form th:action="@{/artikel/update}" th:object="${artikel}" method="post">
+                            <form th:action="@{/artikels/update}" th:object="${artikel}" method="post">
                                 <input type="hidden" th:field="*{id}" />
                                 <div class="form-group">
                                     <label for="inputId">ID</label>
@@ -39,7 +39,7 @@
                                     <input type="text" class="form-control" id="inputPenulis" placeholder="penulis" th:field="*{penulis}" />
                                 </div>
                                 <div class="text-right">
-                                    <a href="artikel" th:href="@{/artikel}" class="btn btn-default">Cancel</a>
+                                    <a href="artikel" th:href="@{/artikels}" class="btn btn-default">Cancel</a>
                                     <button type="submit" class="btn btn-primary">Save</button>
                                 </div>
                             </form>

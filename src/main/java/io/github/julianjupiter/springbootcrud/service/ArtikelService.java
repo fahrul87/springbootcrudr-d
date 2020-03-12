@@ -1,6 +1,6 @@
 package io.github.julianjupiter.springbootcrud.service;
 
-import java.util.Optional;
+
 
 import io.github.julianjupiter.springbootcrud.domain.Artikel;
 
