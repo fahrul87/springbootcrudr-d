@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: CRUD in Spring Boot with Spring Data JPA
+Implementation-Version: 0.0.1
+Built-By: f4hrul
+Implementation-Vendor-Id: io.github.julianjupiter
+Build-Jdk: 1.8.0_201
+Implementation-URL: http://projects.spring.io/spring-boot/springbootcr
+ ud/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
